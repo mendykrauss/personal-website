@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Dark centre aligned with searchicon and avatar</title>
+    <title>Mendy Krauss</title>
   </head>
 
   <body>
@@ -68,7 +68,7 @@
           id="mobile-nav"
         >
           <div
-            class="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-gray-800 shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out"
+            class="w-full h-72 z-40 fixed overflow-y-auto z-40 top-0 bg-gray-800 shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out"
           >
             <div class="px-6 h-full">
               <div class="flex flex-col justify-between h-full w-full">
@@ -95,7 +95,7 @@
                           <div class="flex items-center">
                             <p
                               tabindex="0"
-                              class="focus:outline-none focus:text-indigo-600 text-indigo-700 xl:text-base text-base ml-3 uppercase"
+                              class="focus:outline-none focus:text-indigo-400 text-indigo-300 xl:text-base text-base ml-3 uppercase"
                             >
                               Dashboard
                             </p>
@@ -110,7 +110,7 @@
                             <div class="flex items-center">
                               <p
                                 tabindex="0"
-                                class="focus:outline-none focus:text-indigo-600 text-white xl:text-base text-base ml-3 uppercase"
+                                class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase"
                               >
                                 Blog
                               </p>
@@ -125,7 +125,7 @@
                           <div class="flex items-center">
                             <p
                               tabindex="0"
-                              class="focus:outline-none focus:text-indigo-600 text-white xl:text-base text-base ml-3 uppercase"
+                              class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase"
                             >
                               eBooks
                             </p>
@@ -138,7 +138,7 @@
                         <div class="flex items-center">
                           <p
                             tabindex="0"
-                            class="focus:outline-none focus:text-indigo-600 text-white xl:text-base text-base ml-3 uppercase"
+                            class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase"
                           >
                             Contact
                           </p>
@@ -177,7 +177,7 @@
       </div>
       <div class="md:w-1/2">
         <div
-          class="mx-auto h-[400px] w-[300px] md:w-[400px] md:h-[450px] xl:h-[800px] lg:h-[600px] lg:w-full sm:block hidden rounded relative mt-6"
+          class="mx-auto h-[400px] w-[300px] md:w-[400px] md:h-[450px] xl:w-[600px] xl:h-[600px] lg:h-[600px] lg:w-full sm:block hidden rounded relative mt-6"
         >
           <img
             class="absolute rounded-full inset-0 w-full h-full object-cover object-center"
@@ -198,9 +198,31 @@
         </div>
       </div>
     </div>
-    <div id="post-list" class="container mx-auto px-4 py-8"></div>
-
-    <script type="module">
+    <!-- add a div where i introduce my calendly for consultation purposes -->
+    <div
+      class="xl:container lg:mx-auto mx-4 md:mx-auto flex flex-col md:items-center justify-between md:flex-row xl:mt-48 md:mt-28 mt-32"
+    >
+      <div class="mb-8 lg:mb-0 w-full text-center">
+        <h1
+          class="text-2xl md:text-4xl xl:text-5xl font-bold w-full text-gray-800 dark:text-white"
+        >
+          Book a Consultation
+        </h1>
+      </div>
+    </div>
+    <!-- Calendly inline widget begin -->
+    <div
+      class="calendly-inline-widget mx-auto"
+      data-url="https://calendly.com/mendy-krauss/consultation-assessment?hide_landing_page_details=1"
+      style="min-width: 320px; height: 630px"
+    ></div>
+    <script
+      type="text/javascript"
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>
+    <!-- Calendly inline widget end -->
+    <script>
       function dropdownHandler(element) {
         let single = element.getElementsByTagName("ul")[0];
         single.classList.toggle("hidden");
@@ -259,65 +281,6 @@
           chevronup.classList.remove("hidden");
         }
       };
-      console.log("hello");
-      const url = "https://medium.com/feed/@mendy_krauss";
-      console.log(url);
-      async function getPosts() {
-        const response = await fetch(url, {
-            mode: "no-cors"
-          }
-        );
-        console.log(response);
-        const xml = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(xml, "application/xml");
-        const items = doc.querySelectorAll("item");
-        const posts = [];
-
-        for (const item of items) {
-          const title = item.querySelector("title").textContent;
-          const link = item.querySelector("link").textContent;
-          const description = item.querySelector("description").textContent;
-          const pubDate = item.querySelector("pubDate").textContent;
-          const thumbnail = item.querySelector("thumbnail").textContent;
-
-          posts.push({
-            title,
-            link,
-            description,
-            pubDate,
-            thumbnail,
-          });
-        }
-
-        return posts;
-      }
-
-      async function displayPosts() {
-        const posts = await getPosts();
-
-        const postList = document.getElementById("post-list");
-
-        for (const post of posts) {
-          const li = document.createElement("li");
-          li.innerHTML = `
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full" src="${post.thumbnail}" alt="Post thumbnail">
-        <div class="px-6 py-4">          <div class="font-bold text-xl mb-2">
-            <a class="text-blue-500 hover:text-blue-800" href="${post.link}">${post.title}</a>
-          </div>
-          <p class="text-gray-700 text-base">
-            ${post.description}
-          </p>
-        </div>
-        <div class="px-6 py-4">
-          <span class="text-xs font-semibold text-gray-700">${post.pubDate}</span>
-        </div>
-      </div>
-    `;
-          postList.appendChild(li);
-        }
-      }
     </script>
   </body>
 </html>
