@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/fd7c8d4b6d.js" crossorigin="anonymous"></script>
     <title>Mendy Krauss</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./">
+    <link rel="icon" type="image/png" sizes="32x32" href="./index.ico">
   </head>
 
   <body>
@@ -26,19 +30,19 @@
               tabindex="0"
               class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white ml-10 mr-5 tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase"
             >
-              Blog
+            <a href="https://blog.mendykrauss.com" target="_blank">Blog</a>
             </li>
             <li
               tabindex="0"
               class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white mr-10 ml-5 tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase"
             >
-              eBooks
+            <a href="https://books.mendykrauss.com" target="_blank">eBooks</a>
             </li>
             <li
               tabindex="0"
               class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase"
             >
-              Contact
+              <a href="#consultation">Contact</a>
             </li>
           </ul>
         </div>
@@ -127,7 +131,7 @@
                               tabindex="0"
                               class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase"
                             >
-                              eBooks
+                            <a href="https://books.mendykrauss.com" target="_blank">ebooks</a>
                             </p>
                           </div>
                         </div>
@@ -140,7 +144,8 @@
                             tabindex="0"
                             class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase"
                           >
-                            Contact
+                          <a href="#consultation">Contact</a>
+
                           </p>
                         </div>
                       </div>
@@ -200,7 +205,7 @@
     </div>
     <!-- add a div where i introduce my calendly for consultation purposes -->
     <div
-      class="xl:container lg:mx-auto mx-4 md:mx-auto flex flex-col md:items-center justify-between md:flex-row xl:mt-48 md:mt-28 mt-32"
+      class="xl:container lg:mx-auto mx-4 md:mx-auto flex flex-col md:items-center justify-between md:flex-row xl:mt-48 md:mt-28 mt-32" id="consultation"
     >
       <div class="mb-8 lg:mb-0 w-full text-center">
         <h1
@@ -222,7 +227,25 @@
       async
     ></script>
     <!-- Calendly inline widget end -->
+    <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 px-4 py-12">
+      <div class="flex flex-col items-center justify-center">
+          <div class="flex items-center gap-x-8 mt-6">
+              <button onclick="window.open('https://twitter.com/mendykrauss', '_blank')" aria-label="twitter" class="focus:outline-none rounded-full">
+                <i class="fa-brands fa-twitter fa-2xl"></i>
+              </button>
+              <button onclick="window.open('https://www.linkedin.com/in/mendy-krauss/', '_blank')" aria-label="fa-linkedin" class="focus:outline-none rounded-full">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+              </button>
+          </div>
+          <div class="flex items-center mt-6">
+              <p class="text-base leading-4 text-gray-800 dark:text-gray-400">&copy; <span id="year"></span> <span class="font-semibold">Mendy Krauss Inc.</span> All rights reserved</p>
+          </div>
+      </div>
+  </div>
+
     <script>
+      // get this year and put into span id year
+      document.getElementById("year").innerHTML = new Date().getFullYear();
       function dropdownHandler(element) {
         let single = element.getElementsByTagName("ul")[0];
         single.classList.toggle("hidden");
