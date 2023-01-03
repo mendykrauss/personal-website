@@ -1,344 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://kit.fontawesome.com/fd7c8d4b6d.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Mendy Krauss</title>
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./index.ico" />
-  </head>
 
-  <body>
-    <div class="h-full w-full">
-      <!-- Code block starts -->
-      <nav class="w-full mx-auto bg-gray-800 shadow xl:block hidden">
-        <div
-          class="container px-6 h-20 flex items-center lg:items-stretch justify-center mx-auto"
-        >
-          <ul class="flex items-center justify-center h-full">
-            <li
-              tabindex="0"
-              class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-indigo-300 hover:text-indigo-400 tracking-normal hidden uppercase"
-            >
-              Dashboard
-            </li>
-            <li
-              tabindex="0"
-              class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white ml-10 mr-5 tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase"
-            >
-              <a href="https://blog.mendykrauss.com" target="_blank">Blog</a>
-            </li>
-            <li
-              tabindex="0"
-              class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white mr-10 ml-5 tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase"
-            >
-              <a href="https://books.mendykrauss.com" target="_blank">eBooks</a>
-            </li>
-            <li
-              tabindex="0"
-              class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase"
-            >
-              <a href="#consultation">Contact</a>
-            </li>
-          </ul>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPLKJZVZET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XPLKJZVZET');
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/fd7c8d4b6d.js" crossorigin="anonymous"></script>
+  <title>Mendy Krauss</title>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./index.ico" />
+</head>
+
+<body>
+  <div class="h-full w-full">
+    <!-- Code block starts -->
+    <nav class="w-full mx-auto bg-gray-800 shadow xl:block hidden">
+      <div class="container px-6 h-20 flex items-center lg:items-stretch justify-center mx-auto">
+        <ul class="flex items-center justify-center h-full">
+          <li tabindex="0"
+            class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-indigo-300 hover:text-indigo-400 tracking-normal hidden uppercase">
+            Dashboard
+          </li>
+          <li tabindex="0"
+            class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white ml-10 mr-5 tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase">
+            <a href="https://blog.mendykrauss.com" target="_blank">Blog</a>
+          </li>
+          <li tabindex="0"
+            class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white mr-10 ml-5 tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase">
+            <a href="https://books.mendykrauss.com" target="_blank">eBooks</a>
+          </li>
+          <li tabindex="0"
+            class="focus:outline-none focus:text-indigo-600 focus:outline-none cursor-pointer h-full xl:flex items-center text-xl font-medium text-white tracking-normal hidden hover:text-indigo-300 transition duration-150 ease-in-out uppercase">
+            <a href="#consultation">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav>
+      <div class="py-4 h-16 px-6 w-full flex xl:hidden justify-between items-center bg-gray-800 fixed top-0 z-40">
+        <div>
+          <button id="menu" aria-label="open menu"
+            class="focus:ring-2 focus:ring-white rounded-md focus:outline-none text-white"
+            onclick="sidebarHandler(true)">
+            <img class="icon icon-tabler icon-tabler-menu-2"
+              src="https://tuk-cdn.s3.amazonaws.com/can-uploader/dark-center-aligned-with-search-icon-and-avatar-svg14.svg"
+              alt="menu" />
+          </button>
         </div>
-      </nav>
-      <nav>
+      </div>
+      <!--Mobile responsive sidebar-->
+      <div class="absolute w-full h-full transform -translate-x-full z-40" id="mobile-nav">
         <div
-          class="py-4 h-16 px-6 w-full flex xl:hidden justify-between items-center bg-gray-800 fixed top-0 z-40"
-        >
-          <div>
-            <button
-              id="menu"
-              aria-label="open menu"
-              class="focus:ring-2 focus:ring-white rounded-md focus:outline-none text-white"
-              onclick="sidebarHandler(true)"
-            >
-              <img
-                class="icon icon-tabler icon-tabler-menu-2"
-                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/dark-center-aligned-with-search-icon-and-avatar-svg14.svg"
-                alt="menu"
-              />
-            </button>
-          </div>
-        </div>
-        <!--Mobile responsive sidebar-->
-        <div
-          class="absolute w-full h-full transform -translate-x-full z-40"
-          id="mobile-nav"
-        >
-          <div
-            class="w-full h-72 z-40 fixed overflow-y-auto z-40 top-0 bg-gray-800 shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out"
-          >
-            <div class="px-6 h-full">
-              <div class="flex flex-col justify-between h-full w-full">
-                <div>
-                  <div class="mt-6 flex w-full items-center justify-between">
-                    <div class="flex items-center justify-between w-full">
-                      <button
-                        id="cross"
-                        aria-label="close menu"
-                        class="focus:outline-none focus:ring-2 rounded-md text-white"
-                        onclick="sidebarHandler(false)"
-                      >
-                        <img
-                          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/dark-center-aligned-with-search-icon-and-avatar-svg15.svg"
-                          alt="cross"
-                        />
-                      </button>
-                    </div>
+          class="w-full h-72 z-40 fixed overflow-y-auto z-40 top-0 bg-gray-800 shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+          <div class="px-6 h-full">
+            <div class="flex flex-col justify-between h-full w-full">
+              <div>
+                <div class="mt-6 flex w-full items-center justify-between">
+                  <div class="flex items-center justify-between w-full">
+                    <button id="cross" aria-label="close menu"
+                      class="focus:outline-none focus:ring-2 rounded-md text-white" onclick="sidebarHandler(false)">
+                      <img
+                        src="https://tuk-cdn.s3.amazonaws.com/can-uploader/dark-center-aligned-with-search-icon-and-avatar-svg15.svg"
+                        alt="cross" />
+                    </button>
                   </div>
-                  <ul class="f-m-m">
-                    <li>
-                      <a class="cursor-pointer">
-                        <div class="text-white pt-8">
-                          <div class="flex items-center">
-                            <p
-                              tabindex="0"
-                              class="focus:outline-none focus:text-indigo-400 text-indigo-300 xl:text-base text-base ml-3 uppercase"
-                            >
-                              Dashboard
-                            </p>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="cursor-pointer">
-                        <div class="text-white pt-8">
-                          <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                              <p
-                                tabindex="0"
-                                class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase"
-                              >
-                                Blog
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="cursor-pointer">
-                        <div class="text-white pt-8">
-                          <div class="flex items-center">
-                            <p
-                              tabindex="0"
-                              class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase"
-                            >
-                              <a
-                                href="https://books.mendykrauss.com"
-                                target="_blank"
-                                >ebooks</a
-                              >
-                            </p>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="text-white pt-8 cursor-pointer">
-                      <div class="flex items-center justify-between">
+                </div>
+                <ul class="f-m-m">
+                  <li>
+                    <a class="cursor-pointer">
+                      <div class="text-white pt-8">
                         <div class="flex items-center">
-                          <p
-                            tabindex="0"
-                            class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase"
-                          >
-                            <a href="#consultation">Contact</a>
+                          <p tabindex="0"
+                            class="focus:outline-none focus:text-indigo-400 text-indigo-300 xl:text-base text-base ml-3 uppercase">
+                            Dashboard
                           </p>
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="cursor-pointer">
+                      <div class="text-white pt-8">
+                        <div class="flex items-center">
+                          <p tabindex="0"
+                            class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase">
+                            <a href="https://blog.mendykrauss.com" target="_blank">blog</a>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="cursor-pointer">
+                      <div class="text-white pt-8">
+                        <div class="flex items-center">
+                          <p tabindex="0"
+                            class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase">
+                            <a href="https://books.mendykrauss.com" target="_blank">ebooks</a>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="text-white pt-8 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                        <p tabindex="0"
+                          class="focus:outline-none focus:text-indigo-400 text-white xl:text-base text-base ml-3 uppercase">
+                          <a href="#consultation">Contact</a>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <!-- Code block ends -->
+    <!-- Code block ends -->
+  </div>
+  <div
+    class="xl:container xl:mx-auto mx-4 md:mx-12 flex flex-col md:items-center justify-between md:flex-row xl:mt-16 md:mt-28 mt-32">
+    <div class="mb-8 lg:mb-0 xl:w-5/12 md:w-1/2 xl:pr-24 w-full md:text-right text-center xl:pr-2 lg:pr-8 md:pr-4">
+      <h1 class="text-2xl md:text-4xl xl:text-5xl font-bold w-full text-gray-800 dark:text-white sm:pr-4 lg:pr-0">
+        About Me
+      </h1>
+      <p class="mt-4 text-xl leading-normal text-gray-600 dark:text-gray-200 lg:w-full w-full xl:pr-0 lg:pr-0 sm:pr-4">
+        I am passionate about the recent developments in #nocode and #lowcode
+        technology. I particularly enjoy working with software automation. I
+        am always eager to learn and improve my skills, and am open to
+        learning from others.
+      </p>
     </div>
-    <div
-      class="xl:container xl:mx-auto mx-4 md:mx-12 flex flex-col md:items-center justify-between md:flex-row xl:mt-16 md:mt-28 mt-32"
-    >
+    <div class="md:w-1/2">
       <div
-        class="mb-8 lg:mb-0 xl:w-5/12 md:w-1/2 xl:pr-24 w-full md:text-right text-center xl:pr-2 lg:pr-8 md:pr-4"
-      >
-        <h1
-          class="text-2xl md:text-4xl xl:text-5xl font-bold w-full text-gray-800 dark:text-white sm:pr-4 lg:pr-0"
-        >
-          About Me
-        </h1>
-        <p
-          class="mt-4 text-xl leading-normal text-gray-600 dark:text-gray-200 lg:w-full w-full xl:pr-0 lg:pr-0 sm:pr-4"
-        >
-          I am passionate about the recent developments in #nocode and #lowcode
-          technology. I particularly enjoy working with software automation. I
-          am always eager to learn and improve my skills, and am open to
-          learning from others.
+        class="mx-auto h-[400px] w-[300px] md:w-[400px] md:h-[450px] xl:w-[600px] xl:h-[600px] lg:h-[600px] lg:w-full sm:block hidden rounded relative mt-6">
+        <img class="absolute rounded-full inset-0 w-full h-full object-cover object-center"
+          src="./Mendy Profile Picture.jpg" alt="Profile picture of Mendy Krauss" role="img" />
+      </div>
+      <div class="w-[400px] h-[450px] sm:w-auto w-10/12 sm:hidden block rounded relative mt-6 mx-auto">
+        <img class="absolute rounded-full inset-0 w-full h-full object-cover object-center"
+          src="./Mendy Profile Picture.jpg" alt="Profile picture of Mendy Krauss" role="img" />
+      </div>
+    </div>
+  </div>
+  <!-- add a div where i introduce my calendly for consultation purposes -->
+  <div
+    class="xl:container lg:mx-auto mx-4 md:mx-auto flex flex-col md:items-center justify-between md:flex-row xl:mt-48 md:mt-28 mt-32"
+    id="consultation">
+    <div class="mb-8 lg:mb-0 w-full text-center">
+      <h1 class="text-2xl md:text-4xl xl:text-5xl font-bold w-full text-gray-800 dark:text-white">
+        Book a Consultation
+      </h1>
+    </div>
+  </div>
+  <!-- Calendly inline widget begin -->
+  <div class="calendly-inline-widget mx-auto"
+    data-url="https://calendly.com/mendy-krauss/consultation-assessment?hide_landing_page_details=1"
+    style="min-width: 320px; height: 630px"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly inline widget end -->
+  <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 px-4 py-12 m-6">
+    <div class="flex flex-col items-center justify-center">
+      <div class="flex items-center gap-x-8 mt-6 visible md:invisible">
+        <button onclick="window.open('https://twitter.com/mendykrauss', '_blank')" aria-label="twitter"
+          class="focus:outline-none">
+          <i class="fa-brands fa-twitter fa-lg"></i>
+        </button>
+        <button onclick="window.open('https://www.linkedin.com/in/mendy-krauss/', '_blank')" aria-label="fa-linkedin"
+          class="focus:outline-none">
+          <i class="fa-brands fa-linkedin fa-lg"></i>
+        </button>
+      </div>
+      <div class="flex items-center gap-x-8 mt-6 invisible md:visible">
+        <button onclick="window.open('https://twitter.com/mendykrauss', '_blank')" aria-label="twitter"
+          class="focus:outline-none">
+          <i class="fa-brands fa-twitter fa-2xl"></i>
+        </button>
+        <button onclick="window.open('https://www.linkedin.com/in/mendy-krauss/', '_blank')" aria-label="fa-linkedin"
+          class="focus:outline-none">
+          <i class="fa-brands fa-linkedin fa-2xl"></i>
+        </button>
+      </div>
+      <div class="flex items-center mt-6">
+        <p class="text-base leading-4 text-gray-800 dark:text-gray-400">
+          &copy; <span id="year"></span>
+          <span class="font-semibold">Mendy Krauss Inc.</span> All rights
+          reserved
         </p>
       </div>
-      <div class="md:w-1/2">
-        <div
-          class="mx-auto h-[400px] w-[300px] md:w-[400px] md:h-[450px] xl:w-[600px] xl:h-[600px] lg:h-[600px] lg:w-full sm:block hidden rounded relative mt-6"
-        >
-          <img
-            class="absolute rounded-full inset-0 w-full h-full object-cover object-center"
-            src="./Mendy Profile Picture.jpg"
-            alt="Profile picture of Mendy Krauss"
-            role="img"
-          />
-        </div>
-        <div
-          class="w-[400px] h-[450px] sm:w-auto w-10/12 sm:hidden block rounded relative mt-6 mx-auto"
-        >
-          <img
-            class="absolute rounded-full inset-0 w-full h-full object-cover object-center"
-            src="./Mendy Profile Picture.jpg"
-            alt="Profile picture of Mendy Krauss"
-            role="img"
-          />
-        </div>
-      </div>
     </div>
-    <!-- add a div where i introduce my calendly for consultation purposes -->
-    <div
-      class="xl:container lg:mx-auto mx-4 md:mx-auto flex flex-col md:items-center justify-between md:flex-row xl:mt-48 md:mt-28 mt-32"
-      id="consultation"
-    >
-      <div class="mb-8 lg:mb-0 w-full text-center">
-        <h1
-          class="text-2xl md:text-4xl xl:text-5xl font-bold w-full text-gray-800 dark:text-white"
-        >
-          Book a Consultation
-        </h1>
-      </div>
-    </div>
-    <!-- Calendly inline widget begin -->
-    <div
-      class="calendly-inline-widget mx-auto"
-      data-url="https://calendly.com/mendy-krauss/consultation-assessment?hide_landing_page_details=1"
-      style="min-width: 320px; height: 630px"
-    ></div>
-    <script
-      type="text/javascript"
-      src="https://assets.calendly.com/assets/external/widget.js"
-      async
-    ></script>
-    <!-- Calendly inline widget end -->
-    <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 px-4 py-12 m-6">
-      <div class="flex flex-col items-center justify-center">
-        <div class="flex items-center gap-x-8 mt-6 visible md:invisible">
-          <button
-            onclick="window.open('https://twitter.com/mendykrauss', '_blank')"
-            aria-label="twitter"
-            class="focus:outline-none"
-          >
-            <i class="fa-brands fa-twitter fa-lg"></i>
-          </button>
-          <button
-            onclick="window.open('https://www.linkedin.com/in/mendy-krauss/', '_blank')"
-            aria-label="fa-linkedin"
-            class="focus:outline-none"
-          >
-            <i class="fa-brands fa-linkedin fa-lg"></i>
-          </button>
-        </div>
-        <div class="flex items-center gap-x-8 mt-6 invisible md:visible">
-          <button
-            onclick="window.open('https://twitter.com/mendykrauss', '_blank')"
-            aria-label="twitter"
-            class="focus:outline-none"
-          >
-            <i class="fa-brands fa-twitter fa-2xl"></i>
-          </button>
-          <button
-            onclick="window.open('https://www.linkedin.com/in/mendy-krauss/', '_blank')"
-            aria-label="fa-linkedin"
-            class="focus:outline-none"
-          >
-            <i class="fa-brands fa-linkedin fa-2xl"></i>
-          </button>
-        </div>
-        <div class="flex items-center mt-6">
-          <p class="text-base leading-4 text-gray-800 dark:text-gray-400">
-            &copy; <span id="year"></span>
-            <span class="font-semibold">Mendy Krauss Inc.</span> All rights
-            reserved
-          </p>
-        </div>
-      </div>
-    </div>
+  </div>
 
-    <script>
-      // get this year and put into span id year
-      document.getElementById("year").innerHTML = new Date().getFullYear();
-      function dropdownHandler(element) {
-        let single = element.getElementsByTagName("ul")[0];
-        single.classList.toggle("hidden");
+  <script>
+    // get this year and put into span id year
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    function dropdownHandler(element) {
+      let single = element.getElementsByTagName("ul")[0];
+      single.classList.toggle("hidden");
+    }
+    function MenuHandler(el, val) {
+      let MainList =
+        el.parentElement.parentElement.getElementsByTagName("ul")[0];
+      let closeIcon =
+        el.parentElement.parentElement.getElementsByClassName(
+          "close-m-menu"
+        )[0];
+      let showIcon =
+        el.parentElement.parentElement.getElementsByClassName(
+          "show-m-menu"
+        )[0];
+      if (val) {
+        MainList.classList.remove("hidden");
+        el.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+      } else {
+        showIcon.classList.remove("hidden");
+        MainList.classList.add("hidden");
+        el.classList.add("hidden");
       }
-      function MenuHandler(el, val) {
-        let MainList =
-          el.parentElement.parentElement.getElementsByTagName("ul")[0];
-        let closeIcon =
-          el.parentElement.parentElement.getElementsByClassName(
-            "close-m-menu"
-          )[0];
-        let showIcon =
-          el.parentElement.parentElement.getElementsByClassName(
-            "show-m-menu"
-          )[0];
-        if (val) {
-          MainList.classList.remove("hidden");
-          el.classList.add("hidden");
-          closeIcon.classList.remove("hidden");
-        } else {
-          showIcon.classList.remove("hidden");
-          MainList.classList.add("hidden");
-          el.classList.add("hidden");
-        }
+    }
+    function searchHandler(element) {
+      let Input = element.parentElement.getElementsByTagName("input")[0];
+      Input.classList.toggle("w-0");
+    }
+    // ------------------------------------------------------
+    let sideBar = document.getElementById("mobile-nav");
+    let menu = document.getElementById("menu");
+    let cross = document.getElementById("cross");
+    const sidebarHandler = (check) => {
+      if (check) {
+        sideBar.style.transform = "translateX(0px)";
+        menu.classList.add("hidden");
+        cross.classList.remove("hidden");
+      } else {
+        sideBar.style.transform = "translateX(-100%)";
+        menu.classList.remove("hidden");
+        cross.classList.add("hidden");
       }
-      function searchHandler(element) {
-        let Input = element.parentElement.getElementsByTagName("input")[0];
-        Input.classList.toggle("w-0");
+    };
+    let list = document.getElementById("list");
+    let chevrondown = document.getElementById("chevrondown");
+    let chevronup = document.getElementById("chevronup");
+    const listHandler = (check) => {
+      if (check) {
+        list.classList.remove("hidden");
+        chevrondown.classList.remove("hidden");
+        chevronup.classList.add("hidden");
+      } else {
+        list.classList.add("hidden");
+        chevrondown.classList.add("hidden");
+        chevronup.classList.remove("hidden");
       }
-      // ------------------------------------------------------
-      let sideBar = document.getElementById("mobile-nav");
-      let menu = document.getElementById("menu");
-      let cross = document.getElementById("cross");
-      const sidebarHandler = (check) => {
-        if (check) {
-          sideBar.style.transform = "translateX(0px)";
-          menu.classList.add("hidden");
-          cross.classList.remove("hidden");
-        } else {
-          sideBar.style.transform = "translateX(-100%)";
-          menu.classList.remove("hidden");
-          cross.classList.add("hidden");
-        }
-      };
-      let list = document.getElementById("list");
-      let chevrondown = document.getElementById("chevrondown");
-      let chevronup = document.getElementById("chevronup");
-      const listHandler = (check) => {
-        if (check) {
-          list.classList.remove("hidden");
-          chevrondown.classList.remove("hidden");
-          chevronup.classList.add("hidden");
-        } else {
-          list.classList.add("hidden");
-          chevrondown.classList.add("hidden");
-          chevronup.classList.remove("hidden");
-        }
-      };
-    </script>
-  </body>
+    };
+  </script>
+</body>
+
 </html>
